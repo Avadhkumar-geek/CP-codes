@@ -1,27 +1,24 @@
-package CSES;
-
 import java.util.*;
 import java.io.*;
 
 public class TwoKnights {
 
-// ========================== CODE STARTS HERE ===================================================
-
+    // ========================== CODE STARTS HERE
+    // ===================================================
 
     public static void solve(InputReader in, PrintWriter out) {
         int n = in.nextInt();
-        for (int a =1; a<=n; a++){
-            long x = (long) a *a;
-            long total = x*(x -1)/2;
-            long possible= total - 4L *(a-1)*(a-2);
+        for (int a = 1; a <= n; a++) {
+            long x = (long) a * a;
+            long total = x * (x - 1) / 2;
+            long possible = total - 4L * (a - 1) * (a - 2);
             out.println(possible);
         }
 
     }
 
-
-// =========================== CODE ENDS HERE ====================================================
-
+    // =========================== CODE ENDS HERE
+    // ====================================================
 
     public static void main(String[] args) throws IOException {
         InputReader in = new InputReader();

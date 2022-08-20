@@ -1,5 +1,3 @@
-package CSES;
-
 import static java.lang.System.out;
 
 import java.util.*;
@@ -12,18 +10,18 @@ public class Playlist {
     public static void main(String[] args) throws Exception {
         FastScanner in = new FastScanner();
         int n = in.nextInt();
-        HashMap<Integer,Integer> map = new HashMap<>();
-        int max=1;
-        int index=0;
-        for(int i = 0; i < n; i++){
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int max = 1;
+        int index = 0;
+        for (int i = 0; i < n; i++) {
             int x = in.nextInt();
 
             if (map.containsKey(x)) {
 
-                index = Integer.max(map.get(x)+1,index);
+                index = Integer.max(map.get(x) + 1, index);
             }
-            map.put(x,i);
-            max = Integer.max(max, i+1-index);
+            map.put(x, i);
+            max = Integer.max(max, i + 1 - index);
         }
 
         System.out.println(max);
@@ -54,12 +52,16 @@ public class Playlist {
     }
 
     public static boolean isPrime(long n) {
-        if (n < 2) return false;
-        if (n == 2 || n == 3) return true;
-        if (n % 2 == 0 || n % 3 == 0) return false;
+        if (n < 2)
+            return false;
+        if (n == 2 || n == 3)
+            return true;
+        if (n % 2 == 0 || n % 3 == 0)
+            return false;
         long sqrtN = (long) Math.sqrt(n) + 1;
         for (long i = 6L; i <= sqrtN; i += 6) {
-            if (n % (i - 1) == 0 || n % (i + 1) == 0) return false;
+            if (n % (i - 1) == 0 || n % (i + 1) == 0)
+                return false;
         }
         return true;
     }
@@ -165,7 +167,8 @@ public class Playlist {
                 } catch (Exception e) {
                     return NC;
                 }
-                if (size == -1) return NC;
+                if (size == -1)
+                    return NC;
                 bId = 0;
             }
             return (char) buf[bId++];
@@ -194,9 +197,11 @@ public class Playlist {
         public long nextLong() {
             cnt = 1;
             boolean neg = false;
-            if (c == NC) c = getChar();
+            if (c == NC)
+                c = getChar();
             for (; (c < '0' || c > '9'); c = getChar()) {
-                if (c == '-') neg = true;
+                if (c == '-')
+                    neg = true;
             }
             long res = 0;
             for (; c >= '0' && c <= '9'; c = getChar()) {
@@ -221,7 +226,8 @@ public class Playlist {
 
         public String next() {
             StringBuilder res = new StringBuilder();
-            while (c <= 32) c = getChar();
+            while (c <= 32)
+                c = getChar();
             while (c > 32) {
                 res.append(c);
                 c = getChar();
@@ -231,7 +237,8 @@ public class Playlist {
 
         public String nextLine() {
             StringBuilder res = new StringBuilder();
-            while (c <= 32) c = getChar();
+            while (c <= 32)
+                c = getChar();
             while (c != '\n') {
                 res.append(c);
                 c = getChar();
@@ -240,11 +247,14 @@ public class Playlist {
         }
 
         public boolean hasNext() {
-            if (c > 32) return true;
+            if (c > 32)
+                return true;
             while (true) {
                 c = getChar();
-                if (c == NC) return false;
-                else if (c > 32) return true;
+                if (c == NC)
+                    return false;
+                else if (c > 32)
+                    return true;
             }
         }
     }

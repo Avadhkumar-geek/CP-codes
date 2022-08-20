@@ -1,12 +1,10 @@
-package CSES;
-
 import java.util.*;
 import java.io.*;
 
 public class CoinPile {
 
-// ========================== CODE STARTS HERE ===================================================
-
+    // ========================== CODE STARTS HERE
+    // ===================================================
 
     public static void solve(InputReader in, PrintWriter out) {
         int t = in.nextInt();
@@ -25,9 +23,8 @@ public class CoinPile {
 
     }
 
-
-// =========================== CODE ENDS HERE ====================================================
-
+    // =========================== CODE ENDS HERE
+    // ====================================================
 
     public static void main(String[] args) throws IOException {
         InputReader in = new InputReader();

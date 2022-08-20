@@ -1,12 +1,10 @@
-package CSES;
-
 import java.util.*;
 import java.io.*;
 
 public class TrailingZeros {
 
-// ========================== CODE STARTS HERE ===================================================
-
+    // ========================== CODE STARTS HERE
+    // ===================================================
 
     public static void solve(InputReader in, PrintWriter out) {
         long n = in.nextInt();
@@ -19,9 +17,8 @@ public class TrailingZeros {
 
     }
 
-
-// =========================== CODE ENDS HERE ====================================================
-
+    // =========================== CODE ENDS HERE
+    // ====================================================
 
     public static void main(String[] args) throws IOException {
         InputReader in = new InputReader();

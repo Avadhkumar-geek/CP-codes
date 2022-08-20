@@ -1,5 +1,3 @@
-package CSES;
-
 import static java.lang.System.out;
 
 import java.util.*;

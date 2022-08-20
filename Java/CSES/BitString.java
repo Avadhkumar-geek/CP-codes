@@ -1,12 +1,10 @@
-package CSES;
-
 import java.util.*;
 import java.io.*;
 
 public class BitString {
 
-// ========================== CODE STARTS HERE ===================================================
-
+    // ========================== CODE STARTS HERE
+    // ===================================================
 
     public static void solve(InputReader in, PrintWriter out) {
         int n = in.nextInt();
@@ -22,14 +20,12 @@ public class BitString {
             }
             out.println("YES");
             out.println(a.size());
-            for (int i :
-                    a) {
+            for (int i : a) {
                 out.print(i + " ");
             }
             out.println();
             out.println(b.size());
-            for (int i :
-                    b) {
+            for (int i : b) {
                 out.print(i + " ");
             }
         } else if (n % 4 == 3) {
@@ -44,14 +40,12 @@ public class BitString {
             }
             out.println("YES");
             out.println(a.size());
-            for (int i :
-                    a) {
+            for (int i : a) {
                 out.print(i + " ");
             }
             out.println();
             out.println(b.size());
-            for (int i :
-                    b) {
+            for (int i : b) {
                 out.print(i + " ");
             }
         } else {
@@ -59,9 +53,8 @@ public class BitString {
         }
     }
 
-
-// =========================== CODE ENDS HERE ====================================================
-
+    // =========================== CODE ENDS HERE
+    // ====================================================
 
     public static void main(String[] args) throws IOException {
         InputReader in = new InputReader();

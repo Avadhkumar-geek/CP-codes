@@ -1,11 +1,10 @@
-package CSES;
-
 import java.io.*;
 
 public class TowerOfHanoi {
 
     public static PrintWriter out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
-    // ========================== CODE STARTS HERE ===================================================
+    // ========================== CODE STARTS HERE
+    // ===================================================
 
     public static void solve(Reader in) throws IOException {
         int disk = in.nextInt();
@@ -22,7 +21,8 @@ public class TowerOfHanoi {
         TOH(disk - 1, mid, from, to);
     }
 
-    // =========================== CODE ENDS HERE ====================================================
+    // =========================== CODE ENDS HERE
+    // ====================================================
 
     public static void main(String[] args) throws IOException {
         Reader in = new Reader();

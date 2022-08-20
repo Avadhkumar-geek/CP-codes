@@ -1,12 +1,10 @@
-package CSES;
-
 import java.util.*;
 import java.io.*;
 
 public class NumberSpiral {
 
-// ========================== CODE STARTS HERE ===================================================
-
+    // ========================== CODE STARTS HERE
+    // ===================================================
 
     public static void solve(InputReader in, PrintWriter out) {
         int n = in.nextInt();
@@ -38,8 +36,8 @@ public class NumberSpiral {
         return row % 2 == 0;
     }
 
-// =========================== CODE ENDS HERE ====================================================
-
+    // =========================== CODE ENDS HERE
+    // ====================================================
 
     public static void main(String[] args) throws IOException {
         InputReader in = new InputReader();

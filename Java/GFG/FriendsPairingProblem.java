@@ -8,13 +8,11 @@ public class FriendsPairingProblem {
     // ============================ CODE STARTS HERE ============================
 
     public static void main(String[] args) throws Exception {
-        FastScanner in = new FastScanner();
         out.println(countFriendsPairings(256));
 
     }
 
-    public static long countFriendsPairings(int n)
-    {
+    public static long countFriendsPairings(int n) {
         int[] dp = new int[n + 1];
         long mod = 1000000007;
 
@@ -37,7 +35,6 @@ public class FriendsPairingProblem {
             this.val = val;
         }
     }
-
 
     // ============================ CODE STARTS HERE ============================
 
@@ -64,12 +61,16 @@ public class FriendsPairingProblem {
     }
 
     public static boolean isPrime(long n) {
-        if (n < 2) return false;
-        if (n == 2 || n == 3) return true;
-        if (n % 2 == 0 || n % 3 == 0) return false;
+        if (n < 2)
+            return false;
+        if (n == 2 || n == 3)
+            return true;
+        if (n % 2 == 0 || n % 3 == 0)
+            return false;
         long sqrtN = (long) Math.sqrt(n) + 1;
         for (long i = 6L; i <= sqrtN; i += 6) {
-            if (n % (i - 1) == 0 || n % (i + 1) == 0) return false;
+            if (n % (i - 1) == 0 || n % (i + 1) == 0)
+                return false;
         }
         return true;
     }
@@ -175,7 +176,8 @@ public class FriendsPairingProblem {
                 } catch (Exception e) {
                     return NC;
                 }
-                if (size == -1) return NC;
+                if (size == -1)
+                    return NC;
                 bId = 0;
             }
             return (char) buf[bId++];
@@ -204,9 +206,11 @@ public class FriendsPairingProblem {
         public long nextLong() {
             cnt = 1;
             boolean neg = false;
-            if (c == NC) c = getChar();
+            if (c == NC)
+                c = getChar();
             for (; (c < '0' || c > '9'); c = getChar()) {
-                if (c == '-') neg = true;
+                if (c == '-')
+                    neg = true;
             }
             long res = 0;
             for (; c >= '0' && c <= '9'; c = getChar()) {
@@ -231,7 +235,8 @@ public class FriendsPairingProblem {
 
         public String next() {
             StringBuilder res = new StringBuilder();
-            while (c <= 32) c = getChar();
+            while (c <= 32)
+                c = getChar();
             while (c > 32) {
                 res.append(c);
                 c = getChar();
@@ -241,7 +246,8 @@ public class FriendsPairingProblem {
 
         public String nextLine() {
             StringBuilder res = new StringBuilder();
-            while (c <= 32) c = getChar();
+            while (c <= 32)
+                c = getChar();
             while (c != '\n') {
                 res.append(c);
                 c = getChar();
@@ -250,11 +256,14 @@ public class FriendsPairingProblem {
         }
 
         public boolean hasNext() {
-            if (c > 32) return true;
+            if (c > 32)
+                return true;
             while (true) {
                 c = getChar();
-                if (c == NC) return false;
-                else if (c > 32) return true;
+                if (c == NC)
+                    return false;
+                else if (c > 32)
+                    return true;
             }
         }
     }

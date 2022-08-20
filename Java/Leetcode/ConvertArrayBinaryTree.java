@@ -1,5 +1,3 @@
-import com.sun.source.tree.Tree;
-
 import static java.lang.System.out;
 
 import java.util.*;
@@ -29,12 +27,14 @@ public class ConvertArrayBinaryTree {
     }
 
     public static TreeNode sortedArrayToBST(int[] nums) {
-        if (nums.length == 0) return null;
+        if (nums.length == 0)
+            return null;
         return tree(nums, 0, nums.length - 1);
     }
 
     public static TreeNode tree(int[] nums, int s, int e) {
-        if (s > e) return null;
+        if (s > e)
+            return null;
         int mid = s + (e - s) / 2;
         TreeNode node = new TreeNode(nums[mid]);
         node.left = tree(nums, s, mid - 1);
@@ -42,10 +42,9 @@ public class ConvertArrayBinaryTree {
         return node;
     }
 
-
     public static void main(String[] args) throws Exception {
         FastScanner in = new FastScanner();
-        int[] arr = {-10,-3,0,5,9};
+        int[] arr = { -10, -3, 0, 5, 9 };
 
     }
 
@@ -74,12 +73,16 @@ public class ConvertArrayBinaryTree {
     }
 
     public static boolean isPrime(long n) {
-        if (n < 2) return false;
-        if (n == 2 || n == 3) return true;
-        if (n % 2 == 0 || n % 3 == 0) return false;
+        if (n < 2)
+            return false;
+        if (n == 2 || n == 3)
+            return true;
+        if (n % 2 == 0 || n % 3 == 0)
+            return false;
         long sqrtN = (long) Math.sqrt(n) + 1;
         for (long i = 6L; i <= sqrtN; i += 6) {
-            if (n % (i - 1) == 0 || n % (i + 1) == 0) return false;
+            if (n % (i - 1) == 0 || n % (i + 1) == 0)
+                return false;
         }
         return true;
     }
@@ -185,7 +188,8 @@ public class ConvertArrayBinaryTree {
                 } catch (Exception e) {
                     return NC;
                 }
-                if (size == -1) return NC;
+                if (size == -1)
+                    return NC;
                 bId = 0;
             }
             return (char) buf[bId++];
@@ -214,9 +218,11 @@ public class ConvertArrayBinaryTree {
         public long nextLong() {
             cnt = 1;
             boolean neg = false;
-            if (c == NC) c = getChar();
+            if (c == NC)
+                c = getChar();
             for (; (c < '0' || c > '9'); c = getChar()) {
-                if (c == '-') neg = true;
+                if (c == '-')
+                    neg = true;
             }
             long res = 0;
             for (; c >= '0' && c <= '9'; c = getChar()) {
@@ -241,7 +247,8 @@ public class ConvertArrayBinaryTree {
 
         public String next() {
             StringBuilder res = new StringBuilder();
-            while (c <= 32) c = getChar();
+            while (c <= 32)
+                c = getChar();
             while (c > 32) {
                 res.append(c);
                 c = getChar();
@@ -251,7 +258,8 @@ public class ConvertArrayBinaryTree {
 
         public String nextLine() {
             StringBuilder res = new StringBuilder();
-            while (c <= 32) c = getChar();
+            while (c <= 32)
+                c = getChar();
             while (c != '\n') {
                 res.append(c);
                 c = getChar();
@@ -260,11 +268,14 @@ public class ConvertArrayBinaryTree {
         }
 
         public boolean hasNext() {
-            if (c > 32) return true;
+            if (c > 32)
+                return true;
             while (true) {
                 c = getChar();
-                if (c == NC) return false;
-                else if (c > 32) return true;
+                if (c == NC)
+                    return false;
+                else if (c > 32)
+                    return true;
             }
         }
     }

@@ -1,12 +1,10 @@
-package CSES;
-
 import java.util.*;
 import java.io.*;
 
 public class GrayCode {
 
-// ========================== CODE STARTS HERE ===================================================
-
+    // ========================== CODE STARTS HERE
+    // ===================================================
 
     static void solve(int n, PrintWriter out) {
         if (n <= 0)
@@ -33,8 +31,8 @@ public class GrayCode {
             out.println(arr.get(i));
     }
 
-// =========================== CODE ENDS HERE ====================================================
-
+    // =========================== CODE ENDS HERE
+    // ====================================================
 
     public static void main(String[] args) throws IOException {
         InputReader in = new InputReader();

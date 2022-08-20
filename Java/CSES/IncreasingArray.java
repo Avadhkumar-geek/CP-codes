@@ -1,12 +1,10 @@
-package CSES;
-
 import java.util.*;
 import java.io.*;
 
 public class IncreasingArray {
 
-// ========================== CODE STARTS HERE ===================================================
-
+    // ========================== CODE STARTS HERE
+    // ===================================================
 
     public static void solve(InputReader in, PrintWriter out) {
         int n = in.nextInt();
@@ -16,22 +14,20 @@ public class IncreasingArray {
         }
         long moves = 0L;
 
-            for (int i = 1; i < n; i++) {
-                if (arr[i] < arr[i - 1]) {
-                    moves += arr[i-1] - arr[i];
-                    arr[i] = arr[i - 1] ;
-
-                }
+        for (int i = 1; i < n; i++) {
+            if (arr[i] < arr[i - 1]) {
+                moves += arr[i - 1] - arr[i];
+                arr[i] = arr[i - 1];
 
             }
 
+        }
 
         out.println(moves);
     }
 
-
-// =========================== CODE ENDS HERE ====================================================
-
+    // =========================== CODE ENDS HERE
+    // ====================================================
 
     public static void main(String[] args) throws IOException {
         InputReader in = new InputReader();

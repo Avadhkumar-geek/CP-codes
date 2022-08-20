@@ -1,12 +1,10 @@
-package CSES;
-
 import java.util.*;
 import java.io.*;
 
 public class Repetitions {
 
-// ========================== CODE STARTS HERE ===================================================
-
+    // ========================== CODE STARTS HERE
+    // ===================================================
 
     public static void solve(InputReader in, PrintWriter out) {
         String DNA = in.nextString();
@@ -15,13 +13,13 @@ public class Repetitions {
         int temp = 1, ans = 1;
         String prev = c[0];
         for (int i = 1; i < c.length; i++) {
-            if (c[i].equals(prev)){
+            if (c[i].equals(prev)) {
                 temp++;
-            }else {
+            } else {
                 temp = 1;
                 prev = c[i];
             }
-            if (temp>ans){
+            if (temp > ans) {
                 ans = temp;
             }
         }
@@ -29,9 +27,8 @@ public class Repetitions {
         out.println(ans);
     }
 
-
-// =========================== CODE ENDS HERE ====================================================
-
+    // =========================== CODE ENDS HERE
+    // ====================================================
 
     public static void main(String[] args) throws IOException {
         InputReader in = new InputReader();

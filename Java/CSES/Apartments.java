@@ -1,5 +1,3 @@
-package CSES;
-
 import static java.lang.System.out;
 
 import java.util.*;
@@ -14,7 +12,6 @@ public class Apartments {
         int n = in.nextInt();
         int m = in.nextInt();
         int k = in.nextInt();
-
 
         PriorityQueue<Integer> arr = new PriorityQueue<>(n);
         for (int i = 0; i < n; i++) {
@@ -53,7 +50,7 @@ public class Apartments {
     }
 
     public static void printArr(int[] arr) {
-        //for debugging only
+        // for debugging only
         for (int x : arr)
             out.print(x + " ");
         out.println();
@@ -68,12 +65,16 @@ public class Apartments {
     }
 
     public static boolean isPrime(long n) {
-        if (n < 2) return false;
-        if (n == 2 || n == 3) return true;
-        if (n % 2 == 0 || n % 3 == 0) return false;
+        if (n < 2)
+            return false;
+        if (n == 2 || n == 3)
+            return true;
+        if (n % 2 == 0 || n % 3 == 0)
+            return false;
         long sqrtN = (long) Math.sqrt(n) + 1;
         for (long i = 6L; i <= sqrtN; i += 6) {
-            if (n % (i - 1) == 0 || n % (i + 1) == 0) return false;
+            if (n % (i - 1) == 0 || n % (i + 1) == 0)
+                return false;
         }
         return true;
     }
@@ -96,7 +97,7 @@ public class Apartments {
     }
 
     public static long power(long x, long y, long p) {
-        //0^0 = 1
+        // 0^0 = 1
         long res = 1L;
         x = x % p;
         while (y > 0) {
@@ -109,7 +110,7 @@ public class Apartments {
     }
 
     public static void push(HashMap<Integer, Integer> map, int k, int v) {
-        //map[k] += v;
+        // map[k] += v;
         if (!map.containsKey(k))
             map.put(k, v);
         else
@@ -117,8 +118,8 @@ public class Apartments {
     }
 
     public static void pull(HashMap<Integer, Integer> map, int k, int v) {
-        //assumes map[k] >= v
-        //map[k] -= v
+        // assumes map[k] >= v
+        // map[k] -= v
         int lol = map.get(k);
         if (lol == v)
             map.remove(k);

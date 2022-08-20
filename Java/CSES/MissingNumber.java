@@ -1,11 +1,10 @@
-package CSES;
-
 import java.util.*;
 import java.io.*;
 
 public class MissingNumber {
 
-    // ========================== CODE STARTS HERE =============================================
+    // ========================== CODE STARTS HERE
+    // =============================================
     public static long solve(InputReader in) {
         long N = in.nextInt();
         long sigma = N * (N + 1) / 2;
@@ -16,8 +15,8 @@ public class MissingNumber {
         return sigma - SUM;
     }
 
-// =========================== CODE ENDS HERE ===================================================
-
+    // =========================== CODE ENDS HERE
+    // ===================================================
 
     public static void main(String[] args) throws IOException {
         InputReader in = new InputReader();
@@ -137,5 +136,3 @@ public class MissingNumber {
         }
     }
 }
-
-

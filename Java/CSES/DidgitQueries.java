@@ -1,12 +1,10 @@
-package CSES;
-
 import java.io.*;
-
 
 public class DidgitQueries {
 
     static PrintWriter out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(System.out)));
-    // ========================== CODE STARTS HERE ===================================================
+    // ========================== CODE STARTS HERE
+    // ===================================================
 
     public static void solve(Reader in) throws IOException {
         int T = in.nextInt();
@@ -38,7 +36,6 @@ public class DidgitQueries {
         System.out.println(last % 10);
     }
 
-
     public static long pow(long p) {
         long base = 1;
         while (p-- > 0) {
@@ -47,7 +44,8 @@ public class DidgitQueries {
         return base;
     }
 
-    // =========================== CODE ENDS HERE ====================================================
+    // =========================== CODE ENDS HERE
+    // ====================================================
 
     public static void main(String[] args) throws IOException {
         Reader in = new Reader();
