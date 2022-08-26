@@ -3,38 +3,28 @@ import static java.lang.System.out;
 import java.util.*;
 import java.io.*;
 
-public class Tower {
+public class Sumoftwolargenumbers {
 
     // ============================ CODE STARTS HERE ============================
 
     public static void main(String[] args) throws Exception {
         FastScanner in = new FastScanner();
         int T = in.nextInt();
-        ArrayList<Integer> arr = new ArrayList<>();
-        for (int i = 0; i < T; i++) {
-            int a = in.nextInt();
-            int l = 0, h = arr.size();
-            while (l < h) {
-                int mid = (l + h) / 2;
-                if (arr.get(mid) > a) {
-                    h = mid;
-                } else {
-                    l = mid + 1;
-                }
-            }
-            if (l == arr.size())
-                arr.add(a);
-            else
-                arr.add(l, a);
+        while (T-- > 0) {
+            String a = in.nextLine();
+            String b = in.nextLine();
         }
-        Set<Integer> a = new HashSet<>();
-        for (int i = 0; i < arr.size(); i++) {
-            a.add(arr.get(i));
-        }
-        out.println(a.size());
+
     }
 
-    // ============================ CODE STARTS HERE ============================
+    static String findSum(String X, String Y) {
+        long a = Long.parseLong(X);
+        long b = Long.parseLong(Y);
+        long ans = a + b;
+        return Long.toString(ans);
+    }
+
+    // ============================ CODE ENDS HERE ============================
 
     public static int[] readArr(int N, BufferedReader infile, StringTokenizer st) throws Exception {
         int[] arr = new int[N];

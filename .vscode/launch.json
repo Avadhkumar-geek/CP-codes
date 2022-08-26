@@ -1,0 +1,70 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch CountInversions",
+            "request": "launch",
+            "mainClass": "CountInversions",
+            "projectName": "CP_1b8c0ded"
+        },
+        {
+            "type": "java",
+            "name": "Launch FactDigitSum",
+            "request": "launch",
+            "mainClass": "FactDigitSum",
+            "projectName": "CP_1b8c0ded"
+        },
+        {
+            "type": "java",
+            "name": "Launch FriendsPairingProblem",
+            "request": "launch",
+            "mainClass": "FriendsPairingProblem",
+            "projectName": "CP_1b8c0ded"
+        },
+        {
+            "type": "java",
+            "name": "Launch GFGKthSmallestElement",
+            "request": "launch",
+            "mainClass": "GFGKthSmallestElement",
+            "projectName": "CP_1b8c0ded"
+        },
+        {
+            "type": "java",
+            "name": "Launch GFGLongestSubArraywithSumK",
+            "request": "launch",
+            "mainClass": "GFGLongestSubArraywithSumK",
+            "projectName": "CP_1b8c0ded"
+        },
+        {
+            "type": "java",
+            "name": "Launch GFGSubarraywithgivensum",
+            "request": "launch",
+            "mainClass": "GFGSubarraywithgivensum",
+            "projectName": "CP_1b8c0ded"
+        },
+        {
+            "type": "java",
+            "name": "Launch GFGTrappingRainWater",
+            "request": "launch",
+            "mainClass": "GFGTrappingRainWater",
+            "projectName": "CP_1b8c0ded"
+        },
+        {
+            "type": "java",
+            "name": "Launch Sumoftwolargenumbers",
+            "request": "launch",
+            "mainClass": "Sumoftwolargenumbers",
+            "projectName": "CP_1b8c0ded"
+        }
+    ]
+}

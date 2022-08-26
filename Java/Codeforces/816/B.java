@@ -3,38 +3,52 @@ import static java.lang.System.out;
 import java.util.*;
 import java.io.*;
 
-public class Tower {
+public class B {
 
     // ============================ CODE STARTS HERE ============================
 
     public static void main(String[] args) throws Exception {
         FastScanner in = new FastScanner();
         int T = in.nextInt();
-        ArrayList<Integer> arr = new ArrayList<>();
-        for (int i = 0; i < T; i++) {
-            int a = in.nextInt();
-            int l = 0, h = arr.size();
-            while (l < h) {
-                int mid = (l + h) / 2;
-                if (arr.get(mid) > a) {
-                    h = mid;
-                } else {
-                    l = mid + 1;
-                }
-            }
-            if (l == arr.size())
-                arr.add(a);
-            else
-                arr.add(l, a);
+        while (T-- > 0) {
+            int n = in.nextInt();
+            long k = in.nextLong();
+            long b = in.nextLong();
+            long s = in.nextLong();
+            solve(n, k, b, s);
         }
-        Set<Integer> a = new HashSet<>();
-        for (int i = 0; i < arr.size(); i++) {
-            a.add(arr.get(i));
-        }
-        out.println(a.size());
     }
 
-    // ============================ CODE STARTS HERE ============================
+    static void solve(int n, long k, long b, long s) {
+        long[] ans = new long[n];
+
+        if (s < k * b || s > k * b + (n * (k - 1))) {
+            out.println(-1);
+            return;
+        } else {
+            ans[0] = k * b;
+            s -= k * b;
+            if (s > 0) {
+                ans[0] += Math.min(s, k - 1);
+                s -= ans[0];
+            }
+            for (int i = 1; i < n; i++) {
+                if (s > 0) {
+                    ans[i] = Math.min(s, k - 1);
+                    s -= ans[i];
+                } else {
+                    ans[i] = 0;
+                }
+            }
+        }
+
+        for (long i : ans) {
+            out.print(i + " ");
+        }
+        out.println();
+    }
+
+    // ============================ CODE ENDS HERE ============================
 
     public static int[] readArr(int N, BufferedReader infile, StringTokenizer st) throws Exception {
         int[] arr = new int[N];
