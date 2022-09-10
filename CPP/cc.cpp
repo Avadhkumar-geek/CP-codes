@@ -36,15 +36,6 @@ const ll INF = 1e9;
 const ld EPS = 1e-9;
 
 
-void solve(int n){
-    if ( n <= 300){
-        cout << 3000 << endl;
-    }
-    else {
-        cout << n * 10 << endl;
-    }
-}
-
 
 int main() {
 
@@ -54,11 +45,8 @@ int main() {
 #endif
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
-    int T;
-    cin >> T;
-    while (T--) {
-        int n;
-        cin >> n;
-        solve (n);
+    int a = 4;
+    while (a--) {
+        cout << "H" << endl;
     }
 }
